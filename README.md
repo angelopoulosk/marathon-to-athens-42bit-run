@@ -10,6 +10,7 @@ Open `index.html` in a browser (it loads Three.js r128 from cdnjs).
 
 - Phone: swipe left/right to change lane, swipe up or tap to jump, swipe down to slide
 - Keyboard: `A`/`D` lanes, `Space` jump, `S` slide
+- Day or night: the button on the start screen and in the game, or `N` while running
 
 ## What is real and what is not
 
@@ -23,8 +24,9 @@ Open `index.html` in a browser (it loads Three.js r128 from cdnjs).
 - **Left out:** 13 footprints that the GPS track clips (the track wanders a few
   metres off the road centre), so the road stays clear.
 - **Hand-built:** the Panathenaic Stadium stands, the National Garden trees, the
-  Parliament, the Discobolus statue and the distant hills. Facades are a generic
-  window texture.
+  Parliament, the Discobolus statue and the distant hills. Facades are drawn
+  textures (apartment blocks with balconies and awnings, glass offices, neoclassical
+  fronts) assigned by height and position, not the real facade of each building.
 
 ## Refreshing the map data
 
