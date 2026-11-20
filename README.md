@@ -15,13 +15,22 @@ Open `index.html` in a browser (it loads Three.js r128 from cdnjs).
 
 - **Course:** real. `data/course-last-2km.json` holds the smoothed last 2 km of a
   2019 race GPS track, in local metres (east, north) relative to the end of the track.
-- **Buildings:** placeholders. Random blocks and labelled boxes for landmarks.
+- **Building footprints and positions:** real, from OpenStreetMap
+  (`data/osm-last-2km.json`, buildings within 110 m of the course). They are embedded
+  in `index.html` as `OSM_B`.
+- **Building heights:** real for the 43 buildings that carry a height or levels tag
+  in OSM; the rest get a default between 13 and 25 m.
+- **Left out:** 13 footprints that the GPS track clips (the track wanders a few
+  metres off the road centre), so the road stays clear.
+- **Hand-built:** the Panathenaic Stadium stands, the National Garden trees, the
+  Parliament, the Discobolus statue and the distant hills. Facades are a generic
+  window texture.
 
-## Next step: real buildings
+## Refreshing the map data
 
-`scripts/fetch_osm.sh` downloads the OpenStreetMap footprints for the corridor
-into `data/osm-last-2km.json`. The game does not read that file yet.
+`scripts/fetch_osm.sh` downloads a slightly wider rectangle around the course.
+The committed extract was taken with a route-hugging query (110 m around the track).
 
 ## Credits
 
-Map data © OpenStreetMap contributors (ODbL), once the OSM step is wired in.
+Map data © OpenStreetMap contributors (ODbL).
